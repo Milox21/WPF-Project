@@ -1,0 +1,186 @@
+﻿<UserControl x:Class="WPF_Project.View.SpaceStationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_Project.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="1450">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/PanelResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Grid Background="#2C394B">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.33*"/>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <GroupBox Grid.Column="0" Header="Station Information" Foreground="White" Margin="5,5,5,5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Label Content="Size" Style="{StaticResource TextManipulator}" Grid.Row="0"/>
+                <Label Content="Type" Style="{StaticResource TextManipulator}" Grid.Row="1"/>
+                <Label Content="Ownership" Style="{StaticResource TextManipulator}" Grid.Row="2"/>
+                <Label Content="Independent" Style="{StaticResource TextManipulator}" Grid.Row="3"/>
+                <Label Content="Main Organization" Style="{StaticResource TextManipulator}" Grid.Row="4"/>
+                <Label Content="Ship Capacity" Style="{StaticResource TextManipulator}" Grid.Row="5"/>
+                <Label Content="Weaponised" Style="{StaticResource TextManipulator}" Grid.Row="6"/>
+
+                <TextBox Width="150" Style="{StaticResource TextBoxManipluator}" Grid.Row="0" Grid.Column="1"/>
+                <TextBox Width="150" Style="{StaticResource TextBoxManipluator}" Grid.Row="1" Grid.Column="1"/>
+                <TextBox Width="150" Style="{StaticResource TextBoxManipluator}" Grid.Row="2" Grid.Column="1"/>
+                <TextBox Width="150" Style="{StaticResource TextBoxManipluator}" Grid.Row="4" Grid.Column="1"/>
+                <TextBox Width="150" Style="{StaticResource TextBoxManipluator}" Grid.Row="5" Grid.Column="1"/>
+                
+                <StackPanel Grid.Row="3" Grid.Column="1" Style="{StaticResource StackHorizontalConstructor}">
+                    <RadioButton Content="Yes" Margin="0,0,15,0" Foreground="White"/>
+                    <RadioButton Content="Autonomus" Margin="0,0,15,0" Foreground="White"/>
+                    <RadioButton Content="No" Margin="0,0,15,0" Foreground="White"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="6" Grid.Column="1" Style="{StaticResource StackHorizontalConstructor}">
+                    <RadioButton Content="Yes" Margin="0,0,15,0" Foreground="White"/>
+                    <RadioButton Content="No" Margin="0,0,15,0" Foreground="White"/>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Grid.Column="2" Header="Main Places" Foreground="White" Margin="5,5,5,5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <GroupBox Grid.Column="0" Header="Place 1" Foreground="White" Margin="5,5,5,5">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical" Style="{StaticResource StackHorizontalConstructor}">
+                            <Label Content="Name" Style="{StaticResource TextManipulator}"/>
+                            <TextBox Width="150" Style="{StaticResource TextBoxManipluator}"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical" Style="{StaticResource StackHorizontalConstructor}">
+                            <Label Content="Owner" Style="{StaticResource TextManipulator}"/>
+                            <TextBox Width="150" Style="{StaticResource TextBoxManipluator}"/>
+                        </StackPanel>
+
+                        <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Height="70" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Style="{StaticResource TextBoxManipluator}"/>
+                    </Grid>
+                </GroupBox>
+
+                <GroupBox Grid.Column="1" Header="Place 2" Foreground="White" Margin="5,5,5,5">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical" Style="{StaticResource StackHorizontalConstructor}">
+                            <Label Content="Name" Style="{StaticResource TextManipulator}"/>
+                            <TextBox Width="150" Style="{StaticResource TextBoxManipluator}"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical" Style="{StaticResource StackHorizontalConstructor}">
+                            <Label Content="Owner" Style="{StaticResource TextManipulator}"/>
+                            <TextBox Width="150" Style="{StaticResource TextBoxManipluator}"/>
+                        </StackPanel>
+
+                        <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Height="70" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Style="{StaticResource TextBoxManipluator}"/>
+                    </Grid>
+                </GroupBox>
+
+                <GroupBox Grid.Row="1" Grid.Column="0" Header="Place 3" Foreground="White" Margin="5,5,5,5">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical" Style="{StaticResource StackHorizontalConstructor}">
+                            <Label Content="Name" Style="{StaticResource TextManipulator}"/>
+                            <TextBox Width="150" Style="{StaticResource TextBoxManipluator}"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical" Style="{StaticResource StackHorizontalConstructor}">
+                            <Label Content="Owner" Style="{StaticResource TextManipulator}"/>
+                            <TextBox Width="150" Style="{StaticResource TextBoxManipluator}"/>
+                        </StackPanel>
+
+                        <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Height="70" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Style="{StaticResource TextBoxManipluator}"/>
+                    </Grid>
+                </GroupBox>
+
+                <GroupBox Grid.Row="1" Grid.Column="1" Header="Place 4" Foreground="White" Margin="5,5,5,5">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical" Style="{StaticResource StackHorizontalConstructor}">
+                            <Label Content="Name" Style="{StaticResource TextManipulator}"/>
+                            <TextBox Width="150" Style="{StaticResource TextBoxManipluator}"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical" Style="{StaticResource StackHorizontalConstructor}">
+                            <Label Content="Owner" Style="{StaticResource TextManipulator}"/>
+                            <TextBox Width="150" Style="{StaticResource TextBoxManipluator}"/>
+                        </StackPanel>
+
+                        <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Height="70" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Style="{StaticResource TextBoxManipluator}"/>
+                    </Grid>
+                </GroupBox>
+            </Grid>
+        </GroupBox>
+        </Grid>
+</UserControl>

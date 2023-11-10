@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="View\AnomalyView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\MoonView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PlanetScience.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\MenuBar.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PlanetView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\RocketScience.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ShipEngineView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ShipHeadView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ShipSegmentView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\SpaceStationView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\StructureView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AnomalyView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\MoonView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PlanetScience.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PlanetView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Resources\PanelResources.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\MenuBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\RocketScience.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ShipEngineView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ShipHeadView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ShipSegmentView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\SpaceStationView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\StructureView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WindowStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

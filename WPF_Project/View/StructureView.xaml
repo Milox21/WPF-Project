@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="WPF_Project.View.StructureView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_Project.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="1450">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/PanelResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Background="#301B3F">
+        <GroupBox Grid.Column="2" Header="Base Information" Foreground="White" Margin="100,50,100,50">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Vertical" Style="{StaticResource StackHorizontalConstructor}">
+                    <Label Style="{StaticResource TextBoxer}"  Content="Construction Progress" />
+                    <Slider Style="{StaticResource SliderManipluator}"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Vertical" Style="{StaticResource StackHorizontalConstructor}">
+                    <Label Style="{StaticResource TextBoxer}"  Content="Money Accuaring Progress" />
+                    <Slider Style="{StaticResource SliderManipluator}" />
+                </StackPanel>
+
+                <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Vertical" Style="{StaticResource StackHorizontalConstructor}">
+                    <Label Style="{StaticResource TextBoxer}"  Content="Power Using" />
+                    <Slider Style="{StaticResource SliderManipluator}" />
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" Grid.Row="0" Orientation="Vertical" Style="{StaticResource StackHorizontalConstructor}">
+                    <Label Style="{StaticResource TextBoxer}"  Content="Support Sponsor" Margin="0,0,0,10"/>
+                    <TextBox Style="{StaticResource TextBoxManipluator}" Grid.Row="1" Grid.Column="1" Width="150" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                    <Slider Style="{StaticResource SliderManipluator}"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Vertical" Style="{StaticResource StackHorizontalConstructor}">
+                    <Label Style="{StaticResource TextBoxer}"  Content="Main Sponsor" Margin="0,0,0,10"/>
+                    <TextBox Style="{StaticResource TextBoxManipluator}" Grid.Row="1" Grid.Column="1" Width="150" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                    <Slider Style="{StaticResource SliderManipluator}"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="3" Grid.Row="0" Orientation="Vertical" Style="{StaticResource StackHorizontalConstructor}">
+                    <Label Style="{StaticResource TextBoxer}"  Content="Support Sponsor" Margin="0,0,0,10"/>
+                    <TextBox Style="{StaticResource TextBoxManipluator}" Grid.Row="1" Grid.Column="1" Width="150" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                    <Slider Style="{StaticResource SliderManipluator}"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" Grid.Row="2" Orientation="Vertical" Style="{StaticResource StackHorizontalConstructor}" Margin="0,-120,0,10">
+                    <Label Style="{StaticResource TextBoxer}"  Content="Planned time of finishing project" Margin="0,0,0,10"/>
+                    <DatePicker VerticalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</UserControl>

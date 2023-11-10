@@ -1,0 +1,205 @@
+﻿<UserControl x:Class="WPF_Project.View.PlanetView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_Project.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="1450">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/PanelResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Grid Background="#0E8388">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <GroupBox Header="Planet Information" Foreground="White" Margin="5,5,5,5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <GroupBox Grid.Column="2" Header="Planet classification" Foreground="White" Margin="5,5,5,5">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <Label Content="Size" Style="{StaticResource TextManipulator}" Grid.Row="0"/>
+                            <Label Content="Type" Style="{StaticResource TextManipulator}" Grid.Row="1"/>
+                            <Label Content="Moons" Style="{StaticResource TextManipulator}" Grid.Row="2"/>
+                            <Label Content="Habitat" Style="{StaticResource TextManipulator}" Grid.Row="3"/>
+                            <Label Content="Water" Style="{StaticResource TextManipulator}" Grid.Row="4"/>
+
+                            <TextBox Width="250" Style="{StaticResource TextBoxManipluator}" Grid.Row="0" Grid.Column="1"/>
+                            <TextBox Width="250" Style="{StaticResource TextBoxManipluator}" Grid.Row="1" Grid.Column="1"/>
+                            <TextBox Width="250" Style="{StaticResource TextBoxManipluator}" Grid.Row="2" Grid.Column="1"/>
+                            <TextBox Width="250" Style="{StaticResource TextBoxManipluator}" Grid.Row="3" Grid.Column="1"/>
+                            <TextBox Width="250" Style="{StaticResource TextBoxManipluator}" Grid.Row="4" Grid.Column="1"/>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+
+                <DataGrid Grid.Row="1" Grid.ColumnSpan="2">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Destryption"/>
+                        <DataGridTextColumn Header="People"/>
+                        <DataGridTextColumn Header="Fauna"/>
+                        <DataGridTextColumn Header="Flora"/>
+                        <DataGridTextColumn Header="Resources"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </GroupBox>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <ComboBox Grid.Column="0" Height="25" Width="200">
+                    <ComboBoxItem Content="Inhabited"/>
+                    <ComboBoxItem Content="Free land"/>
+                    <ComboBoxItem Content="Able to being terraformed"/>
+                    <ComboBoxItem Content="None"/>
+                </ComboBox>
+
+                <GroupBox Grid.Column="2" Header="Place Atributes" Foreground="White" Margin="5,5,5,5">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Label Content="Name" Style="{StaticResource TextBoxer}" Grid.Row="0"/>
+                        <Label Content="Ownership" Style="{StaticResource TextBoxer}" Grid.Row="1"/>
+                        <Label Content="Population" Style="{StaticResource TextBoxer}" Grid.Row="2"/>
+                        <Label Content="Territory" Style="{StaticResource TextBoxer}" Grid.Row="3"/>
+
+                        <TextBox Width="250" Style="{StaticResource TextBoxManipluator}" Grid.Row="0" Grid.Column="1"/>
+                        <TextBox Width="250" Style="{StaticResource TextBoxManipluator}" Grid.Row="1" Grid.Column="1"/>
+                        <TextBox Width="250" Style="{StaticResource TextBoxManipluator}" Grid.Row="2" Grid.Column="1"/>
+                        <TextBox Width="250" Style="{StaticResource TextBoxManipluator}" Grid.Row="3" Grid.Column="1"/>
+                    </Grid>
+                </GroupBox>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <ComboBox Grid.Column="0" Height="25" Width="200">
+                    <ComboBoxItem Content="Inhabited"/>
+                    <ComboBoxItem Content="Free land"/>
+                    <ComboBoxItem Content="Able to being terraformed"/>
+                    <ComboBoxItem Content="None"/>
+                </ComboBox>
+
+                <GroupBox Grid.Column="2" Header="Place Atributes" Foreground="White" Margin="5,5,5,5">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Label Content="Name" Style="{StaticResource TextBoxer}" Grid.Row="0"/>
+                        <Label Content="Ownership" Style="{StaticResource TextBoxer}" Grid.Row="1"/>
+                        <Label Content="Population" Style="{StaticResource TextBoxer}" Grid.Row="2"/>
+                        <Label Content="Territory" Style="{StaticResource TextBoxer}" Grid.Row="3"/>
+
+                        <TextBox Width="250" Style="{StaticResource TextBoxManipluator}" Grid.Row="0" Grid.Column="1"/>
+                        <TextBox Width="250" Style="{StaticResource TextBoxManipluator}" Grid.Row="1" Grid.Column="1"/>
+                        <TextBox Width="250" Style="{StaticResource TextBoxManipluator}" Grid.Row="2" Grid.Column="1"/>
+                        <TextBox Width="250" Style="{StaticResource TextBoxManipluator}" Grid.Row="3" Grid.Column="1"/>
+                    </Grid>
+                </GroupBox>
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <ComboBox Grid.Column="0" Height="25" Width="200">
+                    <ComboBoxItem Content="Inhabited"/>
+                    <ComboBoxItem Content="Free land"/>
+                    <ComboBoxItem Content="Able to being terraformed"/>
+                    <ComboBoxItem Content="None"/>
+                </ComboBox>
+
+                <GroupBox Grid.Column="2" Header="Place Atributes" Foreground="White" Margin="5,5,5,5">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Label Content="Name" Style="{StaticResource TextBoxer}" Grid.Row="0"/>
+                        <Label Content="Ownership" Style="{StaticResource TextBoxer}" Grid.Row="1"/>
+                        <Label Content="Population" Style="{StaticResource TextBoxer}" Grid.Row="2"/>
+                        <Label Content="Territory" Style="{StaticResource TextBoxer}" Grid.Row="3"/>
+
+                        <TextBox Width="250" Style="{StaticResource TextBoxManipluator}" Grid.Row="0" Grid.Column="1"/>
+                        <TextBox Width="250" Style="{StaticResource TextBoxManipluator}" Grid.Row="1" Grid.Column="1"/>
+                        <TextBox Width="250" Style="{StaticResource TextBoxManipluator}" Grid.Row="2" Grid.Column="1"/>
+                        <TextBox Width="250" Style="{StaticResource TextBoxManipluator}" Grid.Row="3" Grid.Column="1"/>
+                    </Grid>
+                </GroupBox>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

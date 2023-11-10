@@ -1,0 +1,152 @@
+﻿<UserControl x:Class="WPF_Project.View.MoonView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_Project.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="1450">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/PanelResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Background="#2C3333">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <GroupBox Header="Moon Information" Foreground="White" Margin="5,5,5,5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition Height="2.5*"/>
+                </Grid.RowDefinitions>
+
+                <Label Content="Size" Style="{StaticResource TextManipulator}" Grid.Row="0"/>
+                <Label Content="Type" Style="{StaticResource TextManipulator}" Grid.Row="1"/>
+                <Label Content="Terraformed" Style="{StaticResource TextManipulator}" Grid.Row="2"/>
+                <Label Content="Colonized" Style="{StaticResource TextManipulator}" Grid.Row="3"/>
+                <Label Content="Water" Style="{StaticResource TextManipulator}" Grid.Row="4"/>
+
+                <TextBox Width="200" Style="{StaticResource TextBoxManipluator}" Grid.Row="0" Grid.Column="1"/>
+                <TextBox Width="200" Style="{StaticResource TextBoxManipluator}" Grid.Row="1" Grid.Column="1"/>
+                
+                <StackPanel Grid.Row="2" Grid.Column="1" Style="{StaticResource StackHorizontalConstructor}">
+                    <RadioButton Content="Yes" Margin="0,0,15,0" Foreground="White"/>
+                    <RadioButton Content="No" Margin="0,0,15,0" Foreground="White"/>
+                </StackPanel>
+                <StackPanel Grid.Row="3" Grid.Column="1" Style="{StaticResource StackHorizontalConstructor}">
+                    <RadioButton Content="Yes" Margin="0,0,15,0" Foreground="White"/>
+                    <RadioButton Content="No" Margin="0,0,15,0" Foreground="White"/>
+                </StackPanel>
+                <StackPanel Grid.Row="4" Grid.Column="1" Style="{StaticResource StackHorizontalConstructor}">
+                    <RadioButton Content="Yes" Margin="0,0,15,0" Foreground="White"/>
+                    <RadioButton Content="No" Margin="0,0,15,0" Foreground="White"/>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Grid.Column="1" Header="Moon Clasification" Foreground="White" Margin="5,5,5,5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition Height="2.5*"/>
+                </Grid.RowDefinitions>
+
+                <Label Content="Planet" Style="{StaticResource TextManipulator}" Grid.Row="0"/>
+                <Label Content="Main Resource" Style="{StaticResource TextManipulator}" Grid.Row="1"/>
+                <Label Content="Regular Orbit" Style="{StaticResource TextManipulator}" Grid.Row="2"/>
+                <Label Content="Dystance from Planet" Style="{StaticResource TextManipulator}" Grid.Row="3"/>
+
+
+                <TextBox Width="150" Style="{StaticResource TextBoxManipluator}" Grid.Row="0" Grid.Column="1"/>
+                <TextBox Width="150" Style="{StaticResource TextBoxManipluator}" Grid.Row="1" Grid.Column="1"/>
+                <TextBox Width="150" Style="{StaticResource TextBoxManipluator}" Grid.Row="3" Grid.Column="1"/>
+
+                <StackPanel Grid.Row="2" Grid.Column="1" Style="{StaticResource StackHorizontalConstructor}">
+                    <RadioButton Content="Yes" Margin="0,0,15,0" Foreground="White"/>
+                    <RadioButton Content="No" Margin="0,0,15,0" Foreground="White"/>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+        <Grid Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.25*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <GroupBox Grid.Column="1" Header="Resources" Foreground="White" Margin="5,5,5,5">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Content="Resource 1:" Style="{StaticResource TextManipulator}" Grid.Row="0"/>
+                    <Label Content="Resource 2:" Style="{StaticResource TextManipulator}" Grid.Row="1"/>
+                    <Label Content="Resource 3:" Style="{StaticResource TextManipulator}" Grid.Row="2"/>
+                    <Label Content="Resource 4:" Style="{StaticResource TextManipulator}" Grid.Row="3"/>
+                    <Label Content="Resource 5:" Style="{StaticResource TextManipulator}" Grid.Row="4"/>
+                    <Label Content="Resource 6:" Style="{StaticResource TextManipulator}" Grid.Row="5"/>
+
+                    <TextBox Width="150" Style="{StaticResource TextBoxManipluator}" Grid.Row="0" Grid.Column="1"/>
+                    <TextBox Width="150" Style="{StaticResource TextBoxManipluator}" Grid.Row="1" Grid.Column="1"/>
+                    <TextBox Width="150" Style="{StaticResource TextBoxManipluator}" Grid.Row="2" Grid.Column="1"/>
+                    <TextBox Width="150" Style="{StaticResource TextBoxManipluator}" Grid.Row="3" Grid.Column="1"/>
+                    <TextBox Width="150" Style="{StaticResource TextBoxManipluator}" Grid.Row="4" Grid.Column="1"/>
+                    <TextBox Width="150" Style="{StaticResource TextBoxManipluator}" Grid.Row="5" Grid.Column="1"/>
+                    
+                    <Label Content="Amount:" Style="{StaticResource TextManipulator}" Grid.Row="0" Grid.Column="2"/>
+                    <Label Content="Amount:" Style="{StaticResource TextManipulator}" Grid.Row="1" Grid.Column="2"/>
+                    <Label Content="Amount:" Style="{StaticResource TextManipulator}" Grid.Row="2" Grid.Column="2"/>
+                    <Label Content="Amount:" Style="{StaticResource TextManipulator}" Grid.Row="3" Grid.Column="2"/>
+                    <Label Content="Amount:" Style="{StaticResource TextManipulator}" Grid.Row="4" Grid.Column="2"/>
+                    <Label Content="Amount:" Style="{StaticResource TextManipulator}" Grid.Row="5" Grid.Column="2"/>
+
+                    <TextBox Width="150" Style="{StaticResource TextBoxManipluator}" Grid.Row="0" Grid.Column="3"/>
+                    <TextBox Width="150" Style="{StaticResource TextBoxManipluator}" Grid.Row="1" Grid.Column="3"/>
+                    <TextBox Width="150" Style="{StaticResource TextBoxManipluator}" Grid.Row="2" Grid.Column="3"/>
+                    <TextBox Width="150" Style="{StaticResource TextBoxManipluator}" Grid.Row="3" Grid.Column="3"/>
+                    <TextBox Width="150" Style="{StaticResource TextBoxManipluator}" Grid.Row="4" Grid.Column="3"/>
+                    <TextBox Width="150" Style="{StaticResource TextBoxManipluator}" Grid.Row="5" Grid.Column="3"/>
+                </Grid>
+            </GroupBox>
+
+        </Grid>
+    </Grid>
+</UserControl>

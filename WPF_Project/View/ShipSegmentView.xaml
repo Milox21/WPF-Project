@@ -1,0 +1,252 @@
+﻿<UserControl x:Class="WPF_Project.View.ShipSegmentView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_Project.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="1450">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/PanelResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Background="#0F3460">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="0.3*"/>
+        </Grid.RowDefinitions>
+
+        <GroupBox Header="Segment Specyfication" Grid.Row="0" Grid.Column="0" Foreground="White" Margin="5,5,5,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Label Content="Cargo" Style="{StaticResource TextManipulator}"/>
+
+                <ComboBox Grid.Column="0" Grid.Row="1" Height="25" Width="200">
+                    <ComboBoxItem Content="People" />
+                    <ComboBoxItem Content="Minerals"/>
+                    <ComboBoxItem Content="Water"/>
+                    <ComboBoxItem Content="Weapons"/>
+                    <ComboBoxItem Content="Prisoners"/>
+                    <ComboBoxItem Content="Other"/>
+                    <ComboBoxItem Content="None"/>
+                </ComboBox>
+
+                <ComboBox Grid.Column="0" Grid.Row="2" Height="25" Width="200">
+                    <ComboBoxItem Content="People" />
+                    <ComboBoxItem Content="Minerals"/>
+                    <ComboBoxItem Content="Water"/>
+                    <ComboBoxItem Content="Weapons"/>
+                    <ComboBoxItem Content="Prisoners"/>
+                    <ComboBoxItem Content="Other"/>
+                    <ComboBoxItem Content="None"/>
+                </ComboBox>
+
+                <ComboBox Grid.Column="0" Grid.Row="3" Height="25" Width="200">
+                    <ComboBoxItem Content="People" />
+                    <ComboBoxItem Content="Minerals"/>
+                    <ComboBoxItem Content="Water"/>
+                    <ComboBoxItem Content="Weapons"/>
+                    <ComboBoxItem Content="Prisoners"/>
+                    <ComboBoxItem Content="Other"/>
+                    <ComboBoxItem Content="None"/>
+                </ComboBox>
+
+                <Label Content="Date of Production" Style="{StaticResource TextManipulator}" Grid.Column="1" Grid.Row="2"/>
+                <DatePicker Grid.Column="1" Grid.Row="3" VerticalAlignment="Center"/>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Header="Segment Specyfication" Grid.Row="0" Grid.Column="2" Foreground="White" Margin="5,5,5,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Label Content="Cargo" Style="{StaticResource TextManipulator}"/>
+
+                <ComboBox Grid.Column="0" Grid.Row="1" Height="25" Width="200">
+                    <ComboBoxItem Content="People" />
+                    <ComboBoxItem Content="Minerals"/>
+                    <ComboBoxItem Content="Water"/>
+                    <ComboBoxItem Content="Weapons"/>
+                    <ComboBoxItem Content="Prisoners"/>
+                    <ComboBoxItem Content="Other"/>
+                    <ComboBoxItem Content="None"/>
+                </ComboBox>
+
+                <ComboBox Grid.Column="0" Grid.Row="2" Height="25" Width="200">
+                    <ComboBoxItem Content="People" />
+                    <ComboBoxItem Content="Minerals"/>
+                    <ComboBoxItem Content="Water"/>
+                    <ComboBoxItem Content="Weapons"/>
+                    <ComboBoxItem Content="Prisoners"/>
+                    <ComboBoxItem Content="Other"/>
+                    <ComboBoxItem Content="None"/>
+                </ComboBox>
+
+                <ComboBox Grid.Column="0" Grid.Row="3" Height="25" Width="200">
+                    <ComboBoxItem Content="People" />
+                    <ComboBoxItem Content="Minerals"/>
+                    <ComboBoxItem Content="Water"/>
+                    <ComboBoxItem Content="Weapons"/>
+                    <ComboBoxItem Content="Prisoners"/>
+                    <ComboBoxItem Content="Other"/>
+                    <ComboBoxItem Content="None"/>
+                </ComboBox>
+
+                <Label Content="Date of Production" Style="{StaticResource TextManipulator}" Grid.Column="1" Grid.Row="2"/>
+                <DatePicker Grid.Column="1" Grid.Row="3" VerticalAlignment="Center"/>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Header="Segment Specyfication" Grid.Row="0" Grid.Column="1" Foreground="White" Margin="5,5,5,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Label Content="Cargo" Style="{StaticResource TextManipulator}"/>
+
+                <ComboBox Grid.Column="0" Grid.Row="1" Height="25" Width="200">
+                    <ComboBoxItem Content="People" />
+                    <ComboBoxItem Content="Minerals"/>
+                    <ComboBoxItem Content="Water"/>
+                    <ComboBoxItem Content="Weapons"/>
+                    <ComboBoxItem Content="Prisoners"/>
+                    <ComboBoxItem Content="Other"/>
+                    <ComboBoxItem Content="None"/>
+                </ComboBox>
+
+                <ComboBox Grid.Column="0" Grid.Row="2" Height="25" Width="200">
+                    <ComboBoxItem Content="People" />
+                    <ComboBoxItem Content="Minerals"/>
+                    <ComboBoxItem Content="Water"/>
+                    <ComboBoxItem Content="Weapons"/>
+                    <ComboBoxItem Content="Prisoners"/>
+                    <ComboBoxItem Content="Other"/>
+                    <ComboBoxItem Content="None"/>
+                </ComboBox>
+
+                <ComboBox Grid.Column="0" Grid.Row="3" Height="25" Width="200">
+                    <ComboBoxItem Content="People" />
+                    <ComboBoxItem Content="Minerals"/>
+                    <ComboBoxItem Content="Water"/>
+                    <ComboBoxItem Content="Weapons"/>
+                    <ComboBoxItem Content="Prisoners"/>
+                    <ComboBoxItem Content="Other"/>
+                    <ComboBoxItem Content="None"/>
+                </ComboBox>
+
+                <Label Content="Date of Production" Style="{StaticResource TextManipulator}" Grid.Column="1" Grid.Row="2"/>
+                <DatePicker Grid.Column="1" Grid.Row="3" VerticalAlignment="Center"/>
+            </Grid>
+        </GroupBox>
+
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.75*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+
+            <Button Grid.Column="0" Height="50" Width="150" Content="SAVE" Background="DarkSlateGray" FontSize="30" Foreground="White" BorderBrush="White"/>
+
+            <ComboBox Grid.Column="1" Height="40" Width="200">
+                <ComboBoxItem Content="Fuel Segment" />
+                <ComboBoxItem Content="Passenger Segment"/>
+                <ComboBoxItem Content="Storage Segment"/>
+                <ComboBoxItem Content="Research Segment"/>
+                <ComboBoxItem Content="Military Segment"/>
+                <ComboBoxItem Content="Colonization Segment"/>
+                <ComboBoxItem Content="Other Segment"/>
+            </ComboBox>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.75*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" Height="50" Width="150" Content="SAVE" Background="DarkSlateGray" FontSize="30" Foreground="White" BorderBrush="White"/>
+
+            <ComboBox Grid.Column="1" Height="40" Width="200">
+                <ComboBoxItem Content="Fuel Segment" />
+                <ComboBoxItem Content="Passenger Segment"/>
+                <ComboBoxItem Content="Storage Segment"/>
+                <ComboBoxItem Content="Research Segment"/>
+                <ComboBoxItem Content="Military Segment"/>
+                <ComboBoxItem Content="Colonization Segment"/>
+                <ComboBoxItem Content="Other Segment"/>
+            </ComboBox>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.75*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" Height="50" Width="150" Content="SAVE" Background="DarkSlateGray" FontSize="30" Foreground="White" BorderBrush="White"/>
+
+            <ComboBox Grid.Column="1" Height="40" Width="200">
+                <ComboBoxItem Content="Fuel Segment" />
+                <ComboBoxItem Content="Passenger Segment"/>
+                <ComboBoxItem Content="Storage Segment"/>
+                <ComboBoxItem Content="Research Segment"/>
+                <ComboBoxItem Content="Military Segment"/>
+                <ComboBoxItem Content="Colonization Segment"/>
+                <ComboBoxItem Content="Other Segment"/>
+            </ComboBox>
+        </Grid>
+
+    </Grid>
+
+</UserControl>
