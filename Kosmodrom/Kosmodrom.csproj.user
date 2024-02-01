@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="test.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\CompanyWireframeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\LogInView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Many\Admin\AcceptingMalfunctionsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Many\Admin\AdminMalfunctionAcceptView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Many\Admin\BanningCompaniesView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Many\Admin\BanningUsersView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Many\Admin\DepartureListView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Many\Company\CompanyArrivalsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Many\Company\CompanyDestinationsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Many\Passenger\BuyTicketView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Many\Passenger\CheckTicketsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Single\Admin\AdminControlPanelView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Single\DeparturesView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Many\DestinationsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Many\PilotsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Many\VehiclesView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Parts\SearchTab.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\PassengerWireframeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Single\Company\PrivArrivalAddView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Single\Company\PrivDepartureAddView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Single\DestinationView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Single\PilotVIew.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Single\VehicleView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\OwnerWireframe.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\WindowPopUps\BannedPopUpView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\WindowPopUps\MalfunctionsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\WindowPopUps\RegisterCompanyView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\WindowPopUps\RegisterPassengerView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\WindowPopUps\SeatPickView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\WindowPopUps\SingleReservationView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="test.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CompanyWireframeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\LogInView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Many\Admin\AcceptingMalfunctionsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Many\Admin\AdminMalfunctionAcceptView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Many\Admin\BanningCompaniesView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Many\Admin\BanningUsersView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Many\Admin\DepartureListView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Many\Company\CompanyArrivalsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Many\Company\CompanyDestinationsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Many\Passenger\BuyTicketView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Many\Passenger\CheckTicketsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Single\Admin\AdminControlPanelView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Single\DeparturesView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Many\DestinationsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Many\PilotsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Many\VehiclesView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Parts\SearchTab.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\PassengerWireframeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Single\Company\PrivArrivalAddView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Single\Company\PrivDepartureAddView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Single\DestinationView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Single\PilotVIew.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Single\VehicleView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\OwnerWireframe.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\WindowPopUps\BannedPopUpView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\WindowPopUps\MalfunctionsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\WindowPopUps\RegisterCompanyView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\WindowPopUps\RegisterPassengerView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\WindowPopUps\SeatPickView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\WindowPopUps\SingleReservationView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

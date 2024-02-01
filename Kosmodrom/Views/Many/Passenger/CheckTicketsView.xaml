@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Kosmodrom.Views.Many.Passenger.CheckTicketsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Kosmodrom.Views.Many.Passenger"
+             xmlns:VMM="clr-namespace:Kosmodrom.ViewModels.Many.Passenger"
+             xmlns:V="clr-namespace:Kosmodrom.Views.Parts"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <VMM:CheckTicketsViewModel/>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.25*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <V:SearchTab Grid.Row="0" />
+        <DataGrid Grid.Row="1" CanUserAddRows="False" AutoGenerateColumns="False"  SelectedItem="{Binding SelectedItem}" ItemsSource="{Binding Models}">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Destination" Binding="{Binding PassengerDepartures.Destination.Name}"/>
+                <DataGridTextColumn Header="Seat Number" Binding="{Binding SeatNumber}"/>
+                <DataGridTextColumn Header="Departure Time" Binding="{Binding PassengerDepartures.TimeOfDeparture }"/>
+                <DataGridTextColumn Header="Price" Binding="{Binding PassengerDepartures.Price}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

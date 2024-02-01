@@ -1,0 +1,30 @@
+﻿<Window x:Class="Kosmodrom.Views.WindowPopUps.RegisterPassengerView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kosmodrom.Views.WindowPopUps"
+        xmlns:VM="clr-namespace:Kosmodrom.ViewModels.WindowPopUps"
+        mc:Ignorable="d"
+        Title="RegisterPassengerView" Height="250" Width="500">
+    <Window.DataContext>
+        <VM:RegisterPassengerViewModel/>
+    </Window.DataContext>
+    
+    <Grid>
+        <UniformGrid Columns="2" Rows="6" >
+            <Label HorizontalAlignment="Center" MaxHeight="30" MaxWidth="250" Grid.Row="2" Grid.Column="2" Content="Name"/>
+            <TextBox MaxHeight="30" MaxWidth="100" Text="{Binding Name}"/>
+            <Label HorizontalAlignment="Center" MaxHeight="30" MaxWidth="250" Grid.Row="2" Grid.Column="2" Content="Surname"/>
+            <TextBox MaxHeight="30" MaxWidth="100" Text="{Binding Surname}"/>
+            <Label HorizontalAlignment="Center" MaxHeight="30" MaxWidth="250" Grid.Row="2" Grid.Column="2" Content="Login"/>
+            <TextBox MaxHeight="30" MaxWidth="100" Text="{Binding Login}"/>
+            <Label HorizontalAlignment="Center" MaxHeight="30" MaxWidth="250" Grid.Row="2" Grid.Column="2" Content="Password"/>
+            <TextBox MaxHeight="30" MaxWidth="100" Text="{Binding Password}"/>
+            <Label HorizontalAlignment="Center" MaxHeight="30" MaxWidth="250" Grid.Row="2" Grid.Column="2" Content="Repeat Password"/>
+            <TextBox MaxHeight="30" MaxWidth="100" Text="{Binding PasswordRepeated}"/>
+            <Label Content="{Binding Error}"/>
+            <Button Command="{Binding OKCommand}" MaxHeight="40" MaxWidth="50">OK</Button>
+        </UniformGrid>
+    </Grid>
+</Window>

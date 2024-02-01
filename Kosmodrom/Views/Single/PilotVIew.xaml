@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="Kosmodrom.Views.Single.PilotVIew"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Kosmodrom.Views.Single"
+             xmlns:Single="clr-namespace:Kosmodrom.ViewModels.Single"
+             xmlns:UC="clr-namespace:Kosmodrom.Views.Many"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    
+    <UserControl.DataContext>
+        <Single:PilotViewModel/>
+    </UserControl.DataContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition Width="0.3*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition />
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="1" Grid.Column="1" Text="Name"/>
+            <TextBlock Grid.Row="1" Grid.Column="2" Text="Surname"/>
+            <TextBlock Grid.Row="1" Grid.Column="3" Text="Can be Lead Pilot"/>
+            <TextBlock Grid.Row="3" Grid.Column="1" Text="Sex"/>
+            <TextBlock Grid.Row="3" Grid.Column="2" Text="Nationality"/>
+            <TextBlock Grid.Row="3" Grid.Column="3" Text="Age"/>
+            <TextBlock Grid.Row="3" Grid.Column="4" Text="Experience"/>
+            
+            <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding FirstName}"/>
+            <TextBox Grid.Row="2" Grid.Column="2" Text="{Binding LastName}"/>
+            <StackPanel Grid.Row="4" Grid.Column="1">
+                <RadioButton Content="Male" GroupName="First Group" IsChecked="{Binding SexArray[0]}"/>
+                <RadioButton Content="Female" GroupName="First Group" IsChecked="{Binding SexArray[1]}"/>
+            </StackPanel>
+            <CheckBox Grid.Row="2" Grid.Column="3" Content="Yes" IsChecked="{Binding LeadPilot}"/>
+            <TextBox Grid.Row="4" Grid.Column="2" Text="{Binding Nationality}"/>
+            <TextBox Grid.Row="4" Grid.Column="3" Text="{Binding Age}"/>
+            <TextBox Grid.Row="4" Grid.Column="4" Text="{Binding Experience}"/>
+
+            <Button Grid.Row="2" Grid.Column="6" Content="ADD PILOT" Command="{Binding SaveAndRefreshCommand}"/>
+        </Grid>
+
+        <UC:PilotsView Grid.Row="1"/>
+
+    </Grid>
+    
+</UserControl>

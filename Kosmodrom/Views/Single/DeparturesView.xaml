@@ -1,0 +1,96 @@
+﻿<UserControl x:Class="Kosmodrom.Views.Many.DeparturesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Kosmodrom.Views.Many"
+             xmlns:A="clr-namespace:Kosmodrom.Views.Many.Admin"
+             xmlns:Single="clr-namespace:Kosmodrom.ViewModels.Single.Admin"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    
+    <UserControl.DataContext>
+        <Single:DepartureViewModel/>
+    </UserControl.DataContext>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Column="0" Grid.Row="0">
+                    <Label FontSize="10">Time Of Departure</Label>
+                    <DatePicker SelectedDate="{Binding TimeOfDeparture}" />
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Grid.Row="0">
+                    <Label FontSize="10">Time Of Arrival</Label>
+                    <DatePicker SelectedDate="{Binding TimeOfArrival}"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="0" Grid.Row="1">
+                    <Label FontSize="10">Destination</Label>
+                    <ComboBox ItemsSource="{Binding Destinations}" DisplayMemberPath="Item.Name" SelectedValuePath="Id" SelectedValue="{Binding SelectedDestination}"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Grid.Row="1">
+                    <Label FontSize="10">Vehicle</Label>
+                    <ComboBox ItemsSource="{Binding Vehicles}" DisplayMemberPath="Item.Name" SelectedValuePath="Id" SelectedValue="{Binding SelectedVehicle}"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="0" Grid.Row="2">
+                    <Label FontSize="10">Reserve Landing Pad</Label>
+                    <Button Content="Button" Command="{Binding ReserveLandingCommand}"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Grid.Row="2">
+                    <Label FontSize="10">Reserve Hangar</Label>
+                    <Button Content="Button" Command="{Binding ReserveHangarCommand}"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                
+                <StackPanel  Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1">
+                    <Label>Pilot 1</Label>
+                    <Label>Pilot 2</Label>
+                </StackPanel>
+                <StackPanel  Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="2">
+                    <ComboBox Margin="5" Width="100" ItemsSource="{Binding Pilots}" DisplayMemberPath="Item.FirstName" SelectedValuePath="Id" SelectedValue="{Binding PilotOne}"/>
+                    <ComboBox Margin="5" Width="100" ItemsSource="{Binding Pilots}" DisplayMemberPath="Item.FirstName" SelectedValuePath="Id" SelectedValue="{Binding PilotTwo}"/>
+                </StackPanel>
+                <Label Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Center">Price</Label>
+                <TextBox  Grid.Row="4" Margin="12" Width="50" Text="{Binding Price}"/>
+            </Grid>
+            <Button Grid.Column="2" Margin="41,112,35,91" Content="ADD"  Command="{Binding SaveAndRefreshCommand}"/>
+        </Grid>
+        <UserControl Grid.Row="1">
+            <A:DepartureListView/>
+        </UserControl>
+    </Grid>
+</UserControl>

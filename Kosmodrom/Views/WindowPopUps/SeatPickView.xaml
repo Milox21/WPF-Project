@@ -1,0 +1,23 @@
+﻿<Window x:Class="Kosmodrom.Views.WindowPopUps.SeatPickView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kosmodrom.Views.WindowPopUps"
+        xmlns:VM="clr-namespace:Kosmodrom.ViewModels.WindowPopUps"
+        mc:Ignorable="d"
+        Title="SeatPickView" Height="200" Width="150">
+    
+    <Window.DataContext>
+        <VM:SeatPickViewModel/>
+    </Window.DataContext>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <ComboBox Width="100" HorizontalAlignment="Center" Margin="15" ItemsSource="{Binding Seats}" SelectedValue="{Binding PickedSeat}"/>
+        <Button Grid.Row="3" Margin="25" Content="OK" Command="{Binding OKCommand}"/>   
+    </Grid>
+</Window>

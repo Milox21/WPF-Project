@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="Kosmodrom.Views.Many.Admin.BanningUsersView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Kosmodrom.Views.Many.Admin"
+             xmlns:VMM="clr-namespace:Kosmodrom.ViewModels.Many.Admin"
+             xmlns:V="clr-namespace:Kosmodrom.Views.Parts"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <VMM:BanningUsersViewModel/>
+    </UserControl.DataContext>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+        <RowDefinition Height="0.25*"/>
+        <RowDefinition/>
+    </Grid.RowDefinitions>
+
+    <V:SearchTab Grid.Row="0" />
+    <DataGrid Grid.Row="1" CanUserAddRows="False" AutoGenerateColumns="False"  SelectedItem="{Binding SelectedItem}" ItemsSource="{Binding Models}">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+               <DataGridTextColumn Header="Surname" Binding="{Binding Surname}"/>
+                <DataGridTextColumn Header="Login" Binding="{Binding Login}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button IsEnabled="True" Command="{Binding DataContext.BanCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}">Ban</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+    </DataGrid>
+    </Grid>
+</UserControl>
