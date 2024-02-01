@@ -72,7 +72,29 @@ namespace Kosmodrom.ViewModels
             PassengerLogin = Database.PassengerLogIns.FirstOrDefault(item => item.IsActive == true && item.Login == Login && item.Password == Password);
             AdminLogin = Database.AdminLogIns.FirstOrDefault(item => item.IsActive == true && item.Login == Login && item.Password == Password);
             CompanyLogin = Database.CompanyLogIns.FirstOrDefault(item => item.IsActive == true && item.Login == Login && item.Password == Password);
-            Properties.Settings.Default.UserId = PassengerLogin.Id;
+            if(Database.SpaceportSupports.FirstOrDefault(item => item.IsActive == true && item.Thing == "Hangars") == null)
+            {
+                Database.SpaceportSupports.Add(new SpaceportSupport()
+                {
+                    Thing = "Hangars",
+                    Amount = 4,
+                    IsActive = true,
+                    CreatedAt = DateTime.Now,
+                    LastEditedAt = DateTime.Now,
+                });
+            }
+            if (Database.SpaceportSupports.FirstOrDefault(item => item.IsActive == true && item.Thing == "LandingPads") == null)
+            {
+                Database.SpaceportSupports.Add(new SpaceportSupport()
+                {
+                    Thing = "LandingPads",
+                    Amount = 4,
+                    IsActive = true,
+                    CreatedAt = DateTime.Now,
+                    LastEditedAt = DateTime.Now,
+                });
+            }
+            //Properties.Settings.Default.UserId = PassengerLogin.Id;
         }
         public void LogIn()
         {
